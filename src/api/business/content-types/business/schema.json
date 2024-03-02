@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "businesses",
+  "info": {
+    "singularName": "business",
+    "pluralName": "businesses",
+    "displayName": "Businesses",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "BusinessName": {
+      "type": "string"
+    },
+    "dateOfRegistration": {
+      "type": "date"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "BusinessName"
+    },
+    "Address": {
+      "type": "json"
+    },
+    "username": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "category": {
+      "type": "string"
+    },
+    "meta": {
+      "type": "json"
+    }
+  }
+}
